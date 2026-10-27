@@ -1,0 +1,38 @@
+---
+title: "Home"
+title-block-banner: false
+title-block-style: none
+page-layout: full
+toc: false
+---
+
+::: {.pond-hero}
+
+::: {.pond-hero-content}
+
+<span class="pond-eyebrow">> hello_world _</span>
+
+# Welcome to The Digital Duck Pond.
+
+### Making things. Breaking things. Figuring things out.
+
+A personal maker notebook by Gina the Ducky.
+
+:::
+
+:::
+
+::: {.pond-intro}
+
+I have a lot of hobbies. Coding, electronics, 3D printing, robotics, running, and whatever else catches my interest.
+
+This is where I bring it all together: projects, experiments, tutorials, things I've learned, and the occasional random rambling.
+
+A little pond full of things I love.
+
+[Projects](projects.qmd){.btn .btn-outline-primary}
+[Blog](blog.qmd){.btn .btn-outline-primary}
+[3D Prints](prints.qmd){.btn .btn-outline-primary}
+[Maker Log](maker-log.qmd){.btn .btn-outline-primary}
+
+:::

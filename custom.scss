@@ -1,0 +1,128 @@
+/*-- scss:defaults --*/
+
+// Disable externally hosted Google Fonts
+$web-font-path: false;
+
+// Use locally hosted fonts
+$font-family-sans-serif: "Neucha", sans-serif;
+$headings-font-family: "Cabin Sketch", cursive;
+
+
+/* ----------------------------------------
+   The Digital Duck Pond - Homepage
+   ---------------------------------------- */
+
+$pond-navy: #172b46;
+$pond-yellow: #f3cd64;
+$pond-paper: #f8f9fa;
+
+
+/* ----------------------------------------
+   Full-width homepage hero
+   ---------------------------------------- */
+
+body:has(.pond-hero) #quarto-content {
+  padding-top: 0;
+}
+
+body:has(.pond-hero) main.content {
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+
+.pond-hero {
+  background-color: #172b46;
+  color: #f8f9fa;
+
+  width: 100%;
+  max-width: none;
+
+  margin: 0;
+  padding: 5rem max(5%, calc((100% - 1200px) / 2));
+
+  border: none;
+  border-radius: 0;
+
+  outline: none;
+
+  position: relative;
+}
+
+/* Subtle notebook-style inner border */
+.pond-hero::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+
+  border: 1px dashed rgba(255, 255, 255, 0.25);
+
+  pointer-events: none;
+}
+
+.pond-hero-content {
+  max-width: 900px;
+}
+
+/* Terminal-inspired label */
+.pond-eyebrow {
+  display: inline-block;
+  color: $pond-yellow;
+  font-family: monospace;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Main heading */
+.pond-hero h1 {
+  color: #ffffff;
+  font-family: "Cabin Sketch", cursive;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+/* Tagline */
+.pond-hero h3 {
+  color: $pond-yellow;
+  font-family: "Neucha", cursive;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+
+/* Subtitle */
+.pond-hero p {
+  color: #e0e7ef;
+  font-size: 1.2rem;
+}
+
+/* Introduction */
+.pond-intro {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 2rem 4rem;
+}
+
+.pond-intro p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+/* Sketchy navigation buttons */
+.pond-intro .btn {
+  margin: 0.4rem 0.5rem 0.4rem 0;
+  border-radius: 9px 13px 8px 12px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .pond-hero {
+    margin: 1rem;
+    padding: 3rem 1.8rem;
+  }
+
+  .pond-intro {
+    padding: 1rem 1.5rem 3rem;
+  }
+}

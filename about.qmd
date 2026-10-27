@@ -1,0 +1,20 @@
+---
+title: "Hi, I'm Gina! 👋"
+about:
+  id: hero-heading
+  template: jolla
+  image: profile.jpg
+  links:
+    - icon: instagram
+      text: Instagram
+      href: https://www.instagram.com/ginatheducky/
+    - icon: github
+      text: Github
+      href: https://github.com/ginatheducky
+---
+
+:::{#hero-heading}
+
+Curious maker, runner, and general hobby collector from Austria. I love building things, figuring out how stuff works, and picking up new hobbies I probably don't have time for. This little pond is where I try to document my projects, experiments, and whatever else I happen to dive into next.
+
+:::

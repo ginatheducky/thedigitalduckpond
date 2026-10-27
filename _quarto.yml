@@ -1,0 +1,30 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "thedigitalduckpond"
+  cookie-consent: 
+    type: express
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+
+format:
+  html:
+    theme:
+      - sketchy
+      - brand
+      - custom.scss
+    css: styles.css
+    toc: true
+    html-math-method: mathml
+
+execute: 
+  freeze: auto
+
+
+

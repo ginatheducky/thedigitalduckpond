@@ -1,0 +1,30 @@
+color:
+  primary: "#1B365D"
+  secondary: "#405D80"
+
+typography:
+  fonts:
+    - family: Neucha
+      source: file
+      files:
+        - path: assets/fonts/neucha-latin-regular.woff2
+          weight: 400
+          style: normal
+
+    - family: Cabin Sketch
+      source: file
+      files:
+        - path: assets/fonts/cabin-sketch-latin-regular.woff2
+          weight: 400
+          style: normal
+        - path: assets/fonts/cabin-sketch-latin-700.woff2
+          weight: 700
+          style: normal
+
+  base:
+    family: Neucha
+
+  headings:
+    family: Cabin Sketch
+    color: primary
+    weight: 700
