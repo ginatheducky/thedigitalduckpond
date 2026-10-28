@@ -5,7 +5,7 @@ description: "A modular moss pole system for climbing plants such as Monstera, w
 title-block-banner: "#172b46"
 title-block-banner-color: "#f8f9fa"
 date: "10/15/2026"
-image: wine.jpg
+image: monstera1.jpg
 categories:
   - plants
 ---

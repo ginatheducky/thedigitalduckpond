@@ -10,9 +10,19 @@ $headings-font-family: "Cabin Sketch", cursive;
 // colors
 $primary: $brand-pond-navy;
 $headings-color: $brand-pond-navy;
+$navbar-hl: $brand-pond-yellow;
 
 
 /*-- scss:rules --*/
+
+// Underline the current page's navbar link
+.navbar .navbar-nav .nav-link.active {
+  color: $navbar-hl;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
+}
 
 /* Homepage banner */
 .pond-home .quarto-title-banner {

@@ -3,7 +3,7 @@ title: "3Dprints"
 listing:
     contents: content/3Dprints
     sort: "date desc"
-    type: default
+    type: grid
     categories: true
     sort-ui: false
     filter-ui: false
