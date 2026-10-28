@@ -7,122 +7,65 @@ $web-font-path: false;
 $font-family-sans-serif: "Neucha", sans-serif;
 $headings-font-family: "Cabin Sketch", cursive;
 
-
-/* ----------------------------------------
-   The Digital Duck Pond - Homepage
-   ---------------------------------------- */
-
+// Pond colours
 $pond-navy: #172b46;
 $pond-yellow: #f3cd64;
 $pond-paper: #f8f9fa;
 
 
-/* ----------------------------------------
-   Full-width homepage hero
-   ---------------------------------------- */
+/*-- scss:rules --*/
 
-body:has(.pond-hero) #quarto-content {
-  padding-top: 0;
+/* Homepage banner */
+.pond-home .quarto-title-banner {
+  margin-bottom: 0;
+  padding-block: clamp(2.5rem, 6vw, 5rem);
 }
 
-body:has(.pond-hero) main.content {
-  margin: 0;
-  padding: 0;
-  max-width: none;
-}
-
-.pond-hero {
-  background-color: #172b46;
-  color: #f8f9fa;
-
-  width: 100%;
-  max-width: none;
-
-  margin: 0;
-  padding: 5rem max(5%, calc((100% - 1200px) / 2));
-
-  border: none;
-  border-radius: 0;
-
-  outline: none;
-
-  position: relative;
-}
-
-/* Subtle notebook-style inner border */
-.pond-hero::before {
-  content: "";
-  position: absolute;
-  inset: 12px;
-
-  border: 1px dashed rgba(255, 255, 255, 0.25);
-
-  pointer-events: none;
-}
-
-.pond-hero-content {
-  max-width: 900px;
-}
-
-/* Terminal-inspired label */
-.pond-eyebrow {
-  display: inline-block;
-  color: $pond-yellow;
-  font-family: monospace;
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Main heading */
-.pond-hero h1 {
-  color: #ffffff;
-  font-family: "Cabin Sketch", cursive;
-  font-size: clamp(2.8rem, 6vw, 5rem);
+.pond-home .quarto-title-banner .title {
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
   line-height: 1.1;
-  margin-bottom: 1.5rem;
+  overflow-wrap: break-word;
 }
 
-/* Tagline */
-.pond-hero h3 {
+.pond-home .quarto-title-banner .subtitle {
   color: $pond-yellow;
-  font-family: "Neucha", cursive;
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
-  font-weight: normal;
-  margin-bottom: 2rem;
+  font-size: clamp(1.35rem, 2.5vw, 2.2rem);
+  line-height: 1.35;
+  margin-top: 1.5rem;
 }
 
-/* Subtitle */
-.pond-hero p {
+.pond-home .quarto-title-banner .description {
   color: #e0e7ef;
   font-size: 1.2rem;
+  margin-top: 1.5rem;
 }
 
-/* Introduction */
-.pond-intro {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 1rem 2rem 4rem;
+/* Join the navbar visually to the banner on the homepage */
+.pond-home #quarto-header,
+.pond-home #quarto-header .navbar {
+  background-color: $pond-navy;
 }
 
-.pond-intro p {
-  font-size: 1.2rem;
-  line-height: 1.7;
+.pond-home #quarto-header .navbar {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
-/* Sketchy navigation buttons */
-.pond-intro .btn {
-  margin: 0.4rem 0.5rem 0.4rem 0;
-  border-radius: 9px 13px 8px 12px;
+/* Keep the footer at the bottom on short homepages */
+body.pond-home {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .pond-hero {
-    margin: 1rem;
-    padding: 3rem 1.8rem;
-  }
+.pond-home #title-block-header,
+.pond-home > footer.footer {
+  flex-shrink: 0;
+}
 
-  .pond-intro {
-    padding: 1rem 1.5rem 3rem;
-  }
+.pond-home #quarto-content {
+  flex: 1 0 auto;
+  min-height: 0 !important;
 }
