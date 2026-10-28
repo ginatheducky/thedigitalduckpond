@@ -7,10 +7,9 @@ $web-font-path: false;
 $font-family-sans-serif: "Neucha", sans-serif;
 $headings-font-family: "Cabin Sketch", cursive;
 
-// Pond colours
-$pond-navy: #172b46;
-$pond-yellow: #f3cd64;
-$pond-paper: #f8f9fa;
+// colors
+$primary: $brand-pond-navy;
+$headings-color: $brand-pond-navy;
 
 
 /*-- scss:rules --*/
@@ -28,14 +27,14 @@ $pond-paper: #f8f9fa;
 }
 
 .pond-home .quarto-title-banner .subtitle {
-  color: $pond-yellow;
+  color: $brand-pond-yellow;
   font-size: clamp(1.35rem, 2.5vw, 2.2rem);
   line-height: 1.35;
   margin-top: 1.5rem;
 }
 
 .pond-home .quarto-title-banner .description {
-  color: #e0e7ef;
+  color: $brand-pond-lightnavygray;
   font-size: 1.2rem;
   margin-top: 1.5rem;
 }
@@ -43,7 +42,7 @@ $pond-paper: #f8f9fa;
 /* Join the navbar visually to the banner on the homepage */
 .pond-home #quarto-header,
 .pond-home #quarto-header .navbar {
-  background-color: $pond-navy;
+  background-color: $brand-pond-navy;
 }
 
 .pond-home #quarto-header .navbar {

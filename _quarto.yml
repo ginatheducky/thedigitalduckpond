@@ -19,8 +19,8 @@ format:
   html:
     theme:
       - sketchy
-      - brand
       - custom.scss
+      - brand
     css: styles.css
     toc: true
     html-math-method: mathml

@@ -1,6 +1,12 @@
 color:
-  primary: "#172b46"
-  secondary: "#405D80"
+  palette:
+    pond-darkwater: "#030027"
+    pond-darknavy: "#1a2333"
+    pond-navy: "#1e2c46"
+    pond-yellow: "#f3cd64"
+    pond-paper: "#f8f9fa"
+    pond-lightnavygray: "#e0e7ef"
+    pond-snow: "f8f9fa"
 
 typography:
   fonts:
@@ -26,5 +32,4 @@ typography:
 
   headings:
     family: Cabin Sketch
-    color: primary
     weight: 700

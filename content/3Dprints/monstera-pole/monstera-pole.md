@@ -12,11 +12,3 @@ categories:
 
 # Made to grow with your plant.
 
-title: "Welcome to The Digital Duck Pond."
-pagetitle: "Home"
-subtitle: "Making things. Breaking things. Figuring things out."
-description: "A personal maker notebook by Gina."
-title-block-banner: "#172b46"
-title-block-banner-color: "#f8f9fa"
-body-classes: pond-home
-toc: false
