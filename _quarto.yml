@@ -10,6 +10,8 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: 3Dprints.qmd
+        text: 3Dprints
       - href: about.qmd
         text: About
 
