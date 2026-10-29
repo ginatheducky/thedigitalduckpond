@@ -15,14 +15,12 @@ $navbar-hl: $brand-pond-yellow;
 
 /*-- scss:rules --*/
 
-// Underline the current page's navbar link
-.navbar .navbar-nav .nav-link.active {
-  color: $navbar-hl;
-  text-decoration: underline;
-  text-decoration-color: currentColor;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.3em;
-}
+@import "styles/print-banner";
+@import "styles/page-banner";
+@import "styles/navbar";
+@import "styles/homepage";
+
+
 
 // Post card frames color for the grid layout of listings
 .quarto-grid-item {
@@ -33,110 +31,4 @@ $navbar-hl: $brand-pond-yellow;
 .quarto-grid-item .listing-title,
 .quarto-grid-item .listing-title a {
   color: $brand-pond-navy;
-}
-
-// --------------------------------
-// PAGE BANNER
-// --------------------------------
-
-#title-block-header.page-banner {
-  background: $brand-pond-navy;
-  color: $brand-pond-paper;
-
-  padding: clamp(1.5rem, 4vw, 3rem);
-  margin-bottom: 2rem;
-
-  // yellow border and round corners
-  border-bottom: 5px solid $brand-pond-yellow;
-  border-radius: 8px 12px 7px 10px;
-}
-
-#title-block-header.page-banner .title {
-  color: $brand-pond-paper;
-  margin: 0 0 0.75rem;
-}
-
-// yellow terminal-style eyebrow
-.page-banner-label {
-  color: $brand-pond-yellow;
-}
-
-// --------------------------------
-// 3DPRINTS BANNER
-// --------------------------------
-
-#title-block-header.print-banner {
-  background: $brand-pond-navy;
-  color: $brand-pond-paper;
-
-  padding: clamp(1.5rem, 4vw, 3rem);
-  margin-bottom: 2rem;
-
-  // yellow border and round corners
-  border-bottom: 5px solid $brand-pond-yellow;
-  border-radius: 8px 12px 7px 10px;
-}
-
-#title-block-header.print-banner .title {
-  color: $brand-pond-paper;
-  margin: 0 0 0.75rem;
-}
-
-// --------------------------------
-// HOME PAGE 
-// --------------------------------
-
-/* Homepage banner */
-.pond-home .quarto-title-banner {
-  margin-bottom: 0;
-  padding-block: clamp(2.5rem, 6vw, 5rem);
-}
-
-.pond-home .quarto-title-banner .title {
-  font-size: clamp(2.2rem, 5vw, 4.5rem);
-  line-height: 1.1;
-  overflow-wrap: break-word;
-}
-
-.pond-home .quarto-title-banner .subtitle {
-  color: $brand-pond-yellow;
-  font-size: clamp(1.35rem, 2.5vw, 2.2rem);
-  line-height: 1.35;
-  margin-top: 1.5rem;
-}
-
-.pond-home .quarto-title-banner .description {
-  color: white;
-  font-size: 1.2rem;
-  margin-top: 1.5rem;
-}
-
-/* Join the navbar visually to the banner on the homepage */
-.pond-home #quarto-header,
-.pond-home #quarto-header .navbar {
-  background-color: $brand-pond-navy;
-}
-
-.pond-home #quarto-header .navbar {
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-/* Keep the footer at the bottom on short homepages */
-body.pond-home {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-
-.pond-home #title-block-header,
-.pond-home > footer.footer {
-  flex-shrink: 0;
-}
-
-.pond-home #quarto-content {
-  flex: 1 0 auto;
-  min-height: 0 !important;
 }

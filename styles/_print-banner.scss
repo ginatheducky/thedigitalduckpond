@@ -1,0 +1,16 @@
+#title-block-header.print-banner {
+  background: $brand-pond-navy;
+  color: $brand-pond-paper;
+
+  padding: clamp(1.5rem, 4vw, 3rem);
+  margin-bottom: 2rem;
+
+  // yellow border and round corners
+  border-bottom: 5px solid $brand-pond-yellow;
+  border-radius: 8px 12px 7px 10px;
+}
+
+#title-block-header.print-banner .title {
+  color: $brand-pond-paper;
+  margin: 0 0 0.75rem;
+}
