@@ -6,7 +6,6 @@ color:
     pond-yellow: "#f3cd64"
     pond-paper: "#f8f9fa"
     pond-lightnavygray: "#e0e7ef"
-    pond-snow: "f8f9fa"
 
 typography:
   fonts:

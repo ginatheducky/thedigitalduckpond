@@ -1,5 +1,15 @@
 ---
-title: "3Dprints"
+pagetitle: "3Dprints"
+title: "3D Prints"
+description: "Useful things, questionable prototypes, and another reason to buy filament."
+banner: 
+    label: "fresh_from_the_print_bed_"
+page-layout: full
+title-block-banner: true
+format:
+    html:
+        template-partials: 
+            - partials/pages/title-block.html
 listing:
     contents: content/3Dprints
     sort: "date desc"
@@ -7,6 +17,4 @@ listing:
     categories: true
     sort-ui: false
     filter-ui: false
-page-layout: full
-title-block-banner: true
 ---

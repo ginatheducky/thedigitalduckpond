@@ -1,0 +1,29 @@
+<header id="title-block-header" class="quarto-title-block default page-banner">
+
+  <div class="quarto-title">
+    <div class="row align-items-center g-4">
+
+      <div class="col-md-8">
+
+        $if(banner.label)$
+        <p class="page-banner-label mb-2">
+          &gt; $banner.label$
+        </p>
+        $endif$
+
+        $if(title)$
+        <h1 class="title display-3 fw-bold">$title$</h1>
+        $endif$
+
+        $if(description)$
+        <div class="description">
+          $description$
+        </div>
+        $endif$
+
+      </div>
+
+    </div>
+  </div>
+
+</header>
