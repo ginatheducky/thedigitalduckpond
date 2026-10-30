@@ -1,4 +1,8 @@
 page-layout: full
-toc: true
+toc: false
+format:
+  html:
+    template-partials:
+      - ../../partials/printprojects/title-block.html
 filters:
   - ../../filters/include-title.lua

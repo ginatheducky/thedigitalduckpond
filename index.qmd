@@ -1,12 +1,19 @@
 ---
-title: "Welcome to The Digital Duck Pond."
 pagetitle: "Home"
+banner:
+    eyebrow: "welcome_to_the_pond_"
+    line: "_ _ _ _ _ _ _"
+title: "The Digital Duck Pond."
 subtitle: "Making things. Breaking things. Figuring things out."
 description: "A personal maker notebook by Gina."
-title-block-banner: "#172b46"
-title-block-banner-color: "#f8f9fa"
 body-classes: pond-home
 toc: false
+page-layout: custom
+title-block-banner: true
+format:
+    html:
+        template-partials: 
+            - partials/homepage/title-block.html
 ---
 
 ::: {.pond-intro}

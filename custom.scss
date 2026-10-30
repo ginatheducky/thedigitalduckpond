@@ -8,9 +8,26 @@ $font-family-sans-serif: "Neucha", sans-serif;
 $headings-font-family: "Cabin Sketch", cursive;
 
 // colors
-$primary: $brand-pond-navy;
-$headings-color: $brand-pond-navy;
-$navbar-hl: $brand-pond-yellow;
+$pond-lightblue: #DCEAF5;
+$pond-blue: #8EACC7;
+$pond-navy: #355574;
+$pond-darknavy: #243B58;
+$pond-yellow: #F7CF2E;
+
+
+$primary: $pond-lightblue;
+$secondary: $pond-blue;
+$ink-color: $pond-darknavy;
+$accent-color: $pond-yellow;
+
+$body-color: $pond-darknavy;
+$headings-color: $pond-navy;
+$link-color: $pond-navy;
+$link-hover-color: $pond-yellow;
+
+$navbar-bg: $pond-lightblue;
+$navbar-hl: $pond-yellow;
+$navbar-fg: $pond-navy;
 
 
 /*-- scss:rules --*/
@@ -19,16 +36,16 @@ $navbar-hl: $brand-pond-yellow;
 @import "styles/page-banner";
 @import "styles/navbar";
 @import "styles/homepage";
-
+@import "styles/footer";
 
 
 // Post card frames color for the grid layout of listings
 .quarto-grid-item {
-  border-color: $brand-pond-navy;
+  border-color: $secondary;
 }
 
 // Post titles, including linked titles
 .quarto-grid-item .listing-title,
 .quarto-grid-item .listing-title a {
-  color: $brand-pond-navy;
+  color: $ink-color;
 }

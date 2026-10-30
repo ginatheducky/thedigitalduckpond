@@ -1,12 +1,3 @@
-color:
-  palette:
-    pond-darkwater: "#030027"
-    pond-darknavy: "#1a2333"
-    pond-navy: "#1e2c46"
-    pond-yellow: "#f3cd64"
-    pond-paper: "#f8f9fa"
-    pond-lightnavygray: "#e0e7ef"
-
 typography:
   fonts:
     - family: Neucha

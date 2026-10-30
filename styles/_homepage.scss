@@ -1,54 +1,19 @@
-/* Homepage banner */
-.pond-home .quarto-title-banner {
-  margin-bottom: 0;
-  padding-block: clamp(2.5rem, 6vw, 5rem);
+#title-block-header.homepage-banner {
+  background: $secondary;
+
+  padding: clamp(1.5rem, 4vw, 3rem);
+  margin-bottom: 2rem;
+
+  // yellow border and round corners
+  border-bottom: 5px solid $accent-color;
+  border-radius: 8px 12px 7px 10px;
 }
 
-.pond-home .quarto-title-banner .title {
-  font-size: clamp(2.2rem, 5vw, 4.5rem);
-  line-height: 1.1;
-  overflow-wrap: break-word;
+// yellow terminal-style eyebrow
+.homepage-banner-eyebrow {
+  color: $accent-color;
 }
 
-.pond-home .quarto-title-banner .subtitle {
-  color: $brand-pond-yellow;
-  font-size: clamp(1.35rem, 2.5vw, 2.2rem);
-  line-height: 1.35;
-  margin-top: 1.5rem;
-}
-
-.pond-home .quarto-title-banner .description {
-  color: white;
-  font-size: 1.2rem;
-  margin-top: 1.5rem;
-}
-
-/* Join the navbar visually to the banner on the homepage */
-.pond-home #quarto-header,
-.pond-home #quarto-header .navbar {
-  background-color: $brand-pond-navy;
-}
-
-.pond-home #quarto-header .navbar {
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-/* Keep the footer at the bottom on short homepages */
-body.pond-home {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-
-.pond-home #title-block-header,
-.pond-home > footer.footer {
-  flex-shrink: 0;
-}
-
-.pond-home #quarto-content {
-  flex: 1 0 auto;
-  min-height: 0 !important;
+.homepage-banner-line {
+  color: $accent-color;
 }

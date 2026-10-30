@@ -7,9 +7,8 @@ website:
   cookie-consent: 
     type: express
   navbar:
-    left:
-      - href: index.qmd
-        text: Home
+    search: false
+    right:
       - href: 3Dprints.qmd
         text: 3Dprints
       - href: about.qmd
@@ -18,9 +17,8 @@ website:
 format:
   html:
     theme:
-      - sketchy
-      - custom.scss
-      - brand
+      light: [sketchy, custom.scss, brand]
+      dark: [sketchy, custom.scss, brand]
     css: styles.css
     toc: true
     html-math-method: mathml

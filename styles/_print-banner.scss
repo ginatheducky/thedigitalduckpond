@@ -1,16 +1,32 @@
 #title-block-header.print-banner {
-  background: $brand-pond-navy;
-  color: $brand-pond-paper;
+  background: $primary;
 
   padding: clamp(1.5rem, 4vw, 3rem);
   margin-bottom: 2rem;
 
   // yellow border and round corners
-  border-bottom: 5px solid $brand-pond-yellow;
+  border-bottom: 5px solid $accent-color;
   border-radius: 8px 12px 7px 10px;
 }
 
-#title-block-header.print-banner .title {
-  color: $brand-pond-paper;
-  margin: 0 0 0.75rem;
+#title-block-header.print-banner {
+  a.printlinks,
+  .printlinks a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      color: $accent-color;
+      text-decoration: underline;
+    }
+  }
+
+  // Remove Quarto's category badge appearance.
+  .printlinks .quarto-category {
+    border: 0;
+    padding: 0;
+    opacity: 1;
+    font-size: inherit;
+    text-transform: none;
+  }
 }

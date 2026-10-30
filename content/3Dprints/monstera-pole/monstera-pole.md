@@ -6,6 +6,8 @@ date: "10/15/2026"
 image: monstera1.jpg
 categories:
   - plants
+  - monstera
+  - household
 ---
 
 
