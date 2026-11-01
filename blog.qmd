@@ -1,0 +1,22 @@
+---
+pagetitle: "Blog"
+title: "Blog"
+description: "Thoughts, tutorials for my future self, and the occasional questionable conclusion."
+banner:
+    eyebrow: "words_and_wires_"
+page-layout: full
+title-block-banner: true
+format:
+    html:
+        template-partials: 
+            - partials/pages/title-block.html
+listing:
+    template: templates/my-blog-listing.ejs
+    contents: content/blog
+    sort: "date desc"
+    categories: true
+    sort-ui: false
+    filter-ui: true
+    page-size: 10
+---
+

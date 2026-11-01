@@ -1,0 +1,51 @@
+```{=html}
+
+<ul class="list list-unstyled blog-listing">
+  <% for (const item of items) { %>
+    <li class="mb-3" <%= metadataAttrs(item) %>>
+      <div class="card shadow-sm">
+        <div class="grid">
+
+          <!-- CONTENT -->
+          <div class="g-col-12 g-col-lg-7">
+            <div class="card-body">
+              <a class="listing-title h1 d-block mb-1 mt-1 stretched-link text-decoration-none" href="<%- item.path %>"><%= item.title %></a>
+              
+              <div class="listing-date text-muted text-uppercase fw-medium mt-auto text-start">Published <%= item.date %></div>
+
+              <div class="listing-description line-clamp-3"><%= item.subtitle %></div>
+
+              <div class="listing-categories mb-2 position-relative" style="z-index: 2;">
+                <% for (const category of item.categories) { %>
+                  <a class="listing-category me-1 text-uppercase"
+                     href="#"
+                     onclick="window.quartoListingCategory('<%= utils.b64encode(category) %>'); return false;">
+                    <%= category %>
+                  </a>
+                <% } %>
+              </div>
+            </div>
+          </div>
+
+          <!-- IMAGE -->
+          <div class="g-col-12 g-col-lg-5">
+            <% if (item.image) { %>
+              <a href="<%- item.path %>">
+                <img src="<%- item.image %>"
+                     class="img-fluid h-100 w-100 object-fit-cover rounded-end"
+                     alt="<%= item.title %>">
+              </a>
+            <% } else { %>
+              <div class="h-100 d-flex align-items-center justify-content-center text-muted">
+                Image Placeholder
+              </div>
+            <% } %>
+          </div>
+
+        </div>
+      </div>
+    </li>
+  <% } %>
+</ul>
+
+```

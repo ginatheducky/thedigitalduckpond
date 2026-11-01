@@ -49,3 +49,20 @@ $navbar-fg: $pond-navy;
 .quarto-grid-item .listing-title a {
   color: $ink-color;
 }
+
+
+// blog listing categories
+.blog-listing .listing-category {
+  color: var(--bs-secondary-color);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 0.25rem;
+  font-size: 0.65em;
+  text-decoration: none;
+  padding: 0.15em 0.5em;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--bs-link-hover-color);
+    border-color: currentColor;
+  }
+}
