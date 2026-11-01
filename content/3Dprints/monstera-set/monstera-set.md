@@ -25,9 +25,10 @@ DESIGNED AND PRINTED BY GINA THE DUCKY
 A modular moss pole system for climbing plants such as Monstera, with a matching decorative pot that fits a standard inlay. Add another section when your plant gets taller. Keep the base, keep growing.
 
 taglines:
-- modular
-- PLA/PETG
-- no supports
+- expandable
+- matching pot
+- screw-together
+- easy to print
 
 {{< insert-print-download-card >}}
 
@@ -51,12 +52,13 @@ taglines:
 :::
 
 ::: {.g-col-12 .g-col-lg-6}
-Printing notes
+Project details
 
+- Components: Decorative pot, soil anchor, pole extension
 - Material: PLA or PETG
 - Supports: Not required
-- Construction: Screw-together sections
-- Other material: Not required
+- Other materials: Not required
+- Assembly: Integrated screw thread
 
 License & attribution
 :::
