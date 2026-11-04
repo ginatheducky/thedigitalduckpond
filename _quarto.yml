@@ -26,6 +26,7 @@ format:
     html-math-method: mathml
     shortcodes:
       - shortcodes/insert-print-download-card.lua
+      - shortcodes/project-info.lua
 
 execute: 
   freeze: auto

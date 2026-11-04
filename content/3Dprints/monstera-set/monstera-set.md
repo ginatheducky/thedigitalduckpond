@@ -3,12 +3,35 @@ title: "Monstera Set: Pole and Pot"
 subtitle: "A little support for your next big leaf."
 description: "A modular moss pole system for climbing plants such as Monstera, with a matching decorative pot that fits a standard inlay."
 date: "10/15/2026"
+updated-on: "10/20/2026"
 image: monstera1.jpg
 categories:
   - plants
+project-id: "monstera-set"
+version: "1.0"
+status: "finished"
 printables: "https://www.printables.com/model/12345"
 makerworld: "https://www.printables.com/model/12345"
+project-highlights:
+  - text: "expandable"
+    icon: "layers"
+  - text: "matching pot"
+    icon: "leaf"
+  - text: "screw-together"
+    icon: "gear"
+  - text: "easy to print"
+    icon: "printer"
+project-details:
+  components: "pot, soil anchor, pole"
+  material: "PLA or PETG"
+  supports: "Not required"
+  other-materials: "Not required"
+  assembly: "integrated screw threads"
+
+  
 ---
+
+{{< project-info >}}
 
 ::: {.grid}
 
@@ -24,11 +47,7 @@ DESIGNED AND PRINTED BY GINA THE DUCKY
 
 A modular moss pole system for climbing plants such as Monstera, with a matching decorative pot that fits a standard inlay. Add another section when your plant gets taller. Keep the base, keep growing.
 
-taglines:
-- expandable
-- matching pot
-- screw-together
-- easy to print
+{{< project-highlights >}}
 
 {{< insert-print-download-card >}}
 
@@ -41,6 +60,13 @@ taglines:
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-lg-6}
+# Project details.
+{{< project-details >}}
+
+:::
+
+::: {.g-col-12 .g-col-lg-6}
+
 # How it works.
 
 01 Start with a steady base: The wide, perforates anchor sits inside the soil to help prevent the pole from tipping as your plant climbs.
@@ -51,16 +77,6 @@ taglines:
 
 :::
 
-::: {.g-col-12 .g-col-lg-6}
-Project details
-
-- Components: Decorative pot, soil anchor, pole extension
-- Material: PLA or PETG
-- Supports: Not required
-- Other materials: Not required
-- Assembly: Integrated screw thread
+:::
 
 License & attribution
-:::
-
-:::
