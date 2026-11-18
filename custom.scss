@@ -66,3 +66,22 @@ $navbar-fg: $pond-navy;
     border-color: currentColor;
   }
 }
+
+/*
+ * Aligns the print banner content with Quarto's main article content.
+ *
+ * Quarto uses a CSS grid with named column boundaries to control
+ * page layout. The 'page-start' and 'page-end' lines define the
+ * full-width article region when using 'page-layout: full'.
+ *
+ * This places the banner text in the same grid region as the article,
+ * while allowing the banner background to span the entire screen.
+ * The alignment automatically adapts to different screen sizes.
+ */
+.print-banner-content {
+  grid-column: page-start / page-end;
+}
+
+.page-banner-content {
+  grid-column: page-start / page-end;
+}

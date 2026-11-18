@@ -3,15 +3,17 @@ title: "Monstera Set: Pole and Pot"
 subtitle: "A little support for your next big leaf."
 description: "A modular moss pole system for climbing plants such as Monstera, with a matching decorative pot that fits a standard inlay."
 date: "10/15/2026"
-updated-on: "10/20/2026"
+updated: "10/20/2026"
 image: monstera1.jpg
 categories:
   - plants
-project-id: "monstera-set"
-version: "1.0"
-status: "finished"
-printables: "https://www.printables.com/model/12345"
-makerworld: "https://www.printables.com/model/12345"
+project-banner:
+  project-id: "monstera-set"
+  project-icon: "leaf"
+  version: "1.0"
+  status: "finished"
+download-links:
+  printables: "https://www.printables.com/model/1628210-monstera-set-moss-pole-and-pot"
 project-highlights:
   - text: "expandable"
     icon: "layers"
@@ -27,11 +29,9 @@ project-details:
   supports: "Not required"
   other-materials: "Not required"
   assembly: "integrated screw threads"
-
-  
 ---
 
-{{< project-info >}}
+{{< project-banner >}}
 
 ::: {.grid}
 
@@ -79,4 +79,4 @@ A modular moss pole system for climbing plants such as Monstera, with a matching
 
 :::
 
-License & attribution
+{{< include ../../../includes/creative-commons.html >}}

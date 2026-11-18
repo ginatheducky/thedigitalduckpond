@@ -1,29 +1,28 @@
-<header id="title-block-header" class="quarto-title-block default print-banner mb-0">
+<header id="title-block-header" class="quarto-title-block default print-banner mb-0 page-columns">
 
-  <div class="quarto-title">
-    <div class="row align-items-center g-4">
+  <div class="print-banner-content">
 
-      <div class="col-md-8">
+      <div class="quarto-title">
+
         $if(categories)$
-        <div class="quarto-categories printlinks">
-          <a href="/3Dprints.html">3Dprints > </a>
-          $for(categories)$
-          <div class="quarto-category">$categories$ / </div>
-          $endfor$
-        </div>
+          <div class="quarto-categories printlinks">
+            <a href="/3Dprints.html">3Dprints > </a>
+            $for(categories)$
+              <div class="quarto-category">$categories$ / </div>
+            $endfor$
+          </div>
         $endif$
 
         $if(title)$
-        <h1 class="title display-3 fw-bold">$title$</h1>
+          <h1 class="title display-3 fw-bold">$title$</h1>
         $endif$
 
         $if(subtitle)$
-        <div class="subtitle fs-3 fw-medium">$subtitle$</div>
+          <div class="subtitle fs-3 fw-medium">$subtitle$</div>
         $endif$
 
       </div>
 
-    </div>
   </div>
 
 </header>

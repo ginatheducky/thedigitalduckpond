@@ -1,0 +1,56 @@
+---
+title: "Legal Notice"
+---
+
+# Impressum
+
+*Legal notice and disclosure pursuant to § 25 Austrian Media Act (Mediengesetz).*
+
+## Website operator
+
+**Website:** The Digital Duck Pond
+
+**Media owner and person responsible for the content:**  
+Christina Kaiser
+
+**Place of residence:**  
+Vienna, Austria
+
+**Contact:**  
+ginatheducky@thedigitalduckpond.com
+
+## Purpose of the website
+
+The Digital Duck Pond is a personal, non-commercial maker blog documenting creative and technical projects, experiments, and learning experiences.
+
+The website covers topics including 3D printing, electronics, programming, DIY projects, and other maker-related activities.
+
+Its purpose is to share personal experiences, project documentation, tutorials, and ideas with others interested in making and learning.
+
+## Disclaimer
+
+The projects, tutorials, designs, and code published on this website are based on my personal experiences and experiments.
+
+While I make reasonable efforts to provide accurate and useful information, I cannot guarantee that all information is complete, up to date, error-free, or suitable for every intended application.
+
+Projects involving electronics, electrical components, machinery, tools, or 3D-printed parts may involve risks. Readers are responsible for assessing these risks and taking appropriate safety precautions.
+
+The information provided on this website is not a substitute for professional technical or safety advice where such advice is required.
+
+## External links
+
+This website contains links to external websites and services.
+
+External websites are operated by their respective providers. I do not control their content, availability, or privacy practices.
+
+Links are provided for reference and convenience. Responsibility and liability for linked content are determined by applicable law.
+
+## Copyright and licensing
+
+Unless otherwise indicated, the original written content, photographs, illustrations, and designs published on The Digital Duck Pond are protected by copyright.
+
+Where a Creative Commons or other license is specified, the material may be used according to the terms of that license.
+
+Downloadable 3D models, source code, and other project files may be subject to separate licenses, which are indicated on the relevant project pages or in their repositories.
+
+Third-party materials remain subject to their respective owners' rights and licensing conditions.

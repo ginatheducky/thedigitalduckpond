@@ -40,8 +40,8 @@ return {
 
         -- 1. read and validate metadata
         local platforms = {
-            { name = "Printables", url = safe_url(meta.printables) },
-            { name = "Makerworld", url = safe_url(meta.makerworld) }
+            { name = "Printables", url = safe_url(meta["download-links"].printables) },
+            { name = "Makerworld", url = safe_url(meta["download-links"].makerworld) }
         }
 
         -- check if there are any links available and don't generate a card if there are no links

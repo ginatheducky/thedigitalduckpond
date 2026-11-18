@@ -8,7 +8,7 @@ subtitle: "Making things. Breaking things. Figuring things out."
 description: "A personal maker notebook by Gina."
 body-classes: pond-home
 toc: false
-page-layout: custom
+page-layout: full
 title-block-banner: true
 format:
     html:
@@ -16,12 +16,17 @@ format:
             - partials/homepage/title-block.html
 ---
 
-::: {.pond-intro}
+
+:::: {.container .py-5}
+
+## Hello, world! 👋
 
 I have a lot of hobbies. Coding, electronics, 3D printing, robotics, running, and whatever else catches my interest.
 
-This is where I bring it all together: projects, experiments, tutorials, things I've learned, and the occasional random rambling.
+This is where I bring it all together: projects, experiments, things I've learned, and the occasional random rambling.
 
 A little pond full of things I love.
 
-:::
+---
+
+::::
