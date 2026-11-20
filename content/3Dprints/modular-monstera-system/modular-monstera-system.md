@@ -2,9 +2,9 @@
 title: "Modular Monstera System"
 subtitle: "A parametric, modular plant support with integrated watering."
 description: "A modular moss pole system for climbing plants such as Monstera. This design includes an integrated watering reservoir."
-date: 2026-11-20
+date: 2026-11-18
 # updated: 
-#image: 
+image: modular-monstera-system.webp
 categories:
   - plants
   - planned
