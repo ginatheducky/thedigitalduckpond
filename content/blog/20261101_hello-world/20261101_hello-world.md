@@ -1,7 +1,7 @@
 ---
 title: "Hello, World! 👋"
 subtitle: "Every blog has to start somewhere. Apparently, this one starts with a Hello, World!"
-date: "11/01/2026"
+date: 2020-11-01
 description: "Welcome to The Digital Duck Pond — my little corner of the internet where I document whatever I'm currently building, breaking, or figuring out."
 image: pixel-sunset-duck.webp
 categories:

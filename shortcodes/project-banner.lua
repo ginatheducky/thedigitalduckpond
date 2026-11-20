@@ -1,42 +1,35 @@
--- Convert metadata to plain text and escape it for HTML.
-local function escape_html(value)
-  local text = value == nil and "" or pandoc.utils.stringify(value)
+local function text(value)
+  return value == nil and "" or pandoc.utils.stringify(value)
+end
 
-  return text
+local function escape_html(value)
+  return (value
     :gsub("&", "&amp;")
     :gsub('"', "&quot;")
     :gsub("<", "&lt;")
-    :gsub(">", "&gt;")
+    :gsub(">", "&gt;"))
 end
 
+local status_styles = {
+  ["finished"] = {
+    label = "Finished",
+    icon = "check-circle",
+    color = "text-bg-success"
+  },
+  ["in development"] = {
+    label = "In development",
+    icon = "tools",
+    color = "text-bg-warning"
+  },
+  ["planned"] = {
+    label = "Planned",
+    icon = "lightbulb",
+    color = "text-bg-secondary"
+  }
+}
+
 return {
-    ["project-banner"] = function(args, kwargs, meta)
-    local function text(value)
-      return value == nil and "" or pandoc.utils.stringify(value)
-    end
-
-    -- Format your existing MM/DD/YYYY dates for display.
-    local function display_date(value)
-      local raw = text(value)
-      local month, day, year = raw:match("^(%d%d?)/(%d%d?)/(%d%d%d%d)$")
-
-      local months = {
-        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-      }
-
-      if month and months[tonumber(month)] then
-        return string.format(
-          "%s %d, %s",
-          months[tonumber(month)],
-          tonumber(day),
-          year
-        )
-      end
-
-      return raw
-    end
-
+  ["project-banner"] = function(args, kwargs, meta)
     local html = {
       '<ul class="d-flex flex-wrap align-items-center gap-3 list-unstyled py-3 mb-4" aria-label="Project information">'
     }
@@ -51,6 +44,7 @@ return {
     local banner = meta["project-banner"] or {}
     local project_id = text(banner["project-id"])
     local project_icon = text(banner["project-icon"])
+
     if not project_icon:match("^[a-z0-9%-]+$") then
       project_icon = "leaf"
     end
@@ -68,7 +62,6 @@ return {
     local version = text(banner["version"])
 
     if version ~= "" then
-      -- Add the v prefix only if it is not already present.
       if not version:match("^[vV]") then
         version = "v" .. version
       end
@@ -84,24 +77,6 @@ return {
     local status = text(banner["status"])
 
     if status ~= "" then
-      local status_styles = {
-        ["finished"] = {
-          label = "Finished",
-          icon = "check-circle",
-          color = "text-bg-success"
-        },
-        ["in development"] = {
-          label = "In development",
-          icon = "tools",
-          color = "text-bg-warning"
-        },
-        ["planned"] = {
-          label = "Planned",
-          icon = "lightbulb",
-          color = "text-bg-secondary"
-        }
-      }
-
       local style = status_styles[status:lower()] or {
         label = status,
         icon = "info-circle",
@@ -112,21 +87,24 @@ return {
         <i class="bi bi-%s fs-4" aria-hidden="true"></i>
         <span>Status:</span>
         <span class="badge rounded-pill %s fs-6">%s</span>
-      ]], style["icon"], style["color"], escape_html(style["label"])))
+      ]], style.icon, style.color, escape_html(style.label)))
     end
 
-    if text(meta["date"]) ~= "" then
+    local published = text(meta["date"])
+    local updated = text(meta["date-modified"])
+
+    if published ~= "" then
       add_item(string.format([[
         <i class="bi bi-calendar3 fs-4" aria-hidden="true"></i>
         <span>Published: %s</span>
-      ]], escape_html(display_date(meta["date"]))))
+      ]], escape_html(published)))
     end
 
-    if text(meta["updated"]) ~= "" then
+    if updated ~= "" then
       add_item(string.format([[
         <i class="bi bi-clock-history fs-4" aria-hidden="true"></i>
         <span>Updated: %s</span>
-      ]], escape_html(display_date(meta["updated"]))))
+      ]], escape_html(updated)))
     end
 
     html[#html + 1] = "</ul>"

@@ -2,7 +2,7 @@
 title: "My SKADIS collection"
 subtitle: "A place for every little thing."
 description: "Scissors, pliers, pens and overlock threas. Practical add-ons that make organizing with SKADIS even more enjoyable."
-date: "10/25/2026"
+date: 2026-10-26
 image: skadiswall.jpg
 categories:
   - organization

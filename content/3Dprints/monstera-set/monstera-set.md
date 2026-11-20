@@ -2,11 +2,12 @@
 title: "Monstera Set: Pole and Pot"
 subtitle: "A little support for your next big leaf."
 description: "A modular moss pole system for climbing plants such as Monstera, with a matching decorative pot that fits a standard inlay."
-date: "10/15/2026"
-updated: "10/20/2026"
+date: 2026-10-15
+date-modified: 2026-10-20
 image: monstera1.jpg
 categories:
   - plants
+  - finished
 project-banner:
   project-id: "monstera-set"
   project-icon: "leaf"
