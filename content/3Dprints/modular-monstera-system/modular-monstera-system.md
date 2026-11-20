@@ -31,6 +31,7 @@ project-details:
   supports: "Yes"
   other-materials: "Cotton string (only if you want to use the water reservoir)"
   assembly: "integrated screw threads - no tools required"
+draft: true
 ---
 
 {{< project-banner >}}
