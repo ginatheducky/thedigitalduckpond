@@ -1,4 +1,4 @@
-#title-block-header.print-banner {
+#title-block-header.project-banner {
   background: $primary;
 
   padding: clamp(1.5rem, 4vw, 3rem);
@@ -9,9 +9,9 @@
   border-radius: 8px 12px 7px 10px;
 }
 
-#title-block-header.print-banner {
+#title-block-header.project-banner {
   a.printlinks,
-  .printlinks a {
+  .projectlinks a {
     text-decoration: none;
 
     &:hover,
@@ -22,7 +22,7 @@
   }
 
   // Remove Quarto's category badge appearance.
-  .printlinks .quarto-category {
+  .projectlinks .quarto-category {
     border: 0;
     padding: 0;
     opacity: 1;

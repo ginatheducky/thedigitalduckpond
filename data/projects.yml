@@ -1,0 +1,65 @@
+projects:
+  MS:
+    project-id: MS
+    slug: monstera-set
+    author: "GINA"
+    title: "Monstera Set"
+    subtitle: "A little support for your next big leaf."
+    description: "A modular moss pole system for climbing plants such as Monstera, with a matching decorative pot that fits a standard inlay."
+    project-type: print-project
+    icon: "leaf" # use bootstrap icons https://icons.getbootstrap.com/
+    status: "finished" # planned, ongoing, finished, revision
+    version: "1.0"
+    links:
+      project-page: null
+      maker-log: null
+      printables: "https://www.printables.com/model/1628210-monstera-set-moss-pole-and-pot"
+      makerworld: null
+      github: null
+    project-highlights: # use bootstrap icons https://icons.getbootstrap.com/
+      - text: "expandable"
+        icon: "layers"
+      - text: "matching pot"
+        icon: "leaf"
+      - text: "screw-together"
+        icon: "gear"
+      - text: "easy to print"
+        icon: "printer"
+    project-details:
+      components: "pot, soil anchor, pole"
+      material: "PLA or PETG"
+      supports: "Not required"
+      other-materials: "Not required"
+      assembly: "integrated screw threads"
+  
+  MMS:
+    project-id: MMS
+    slug: modular-monstera-system
+    title: "Modular Monstera System"
+    subtitle: "A parametric, modular plant support with integrated watering."
+    description: "A modular moss pole system for climbing plants such as Monstera. This design includes an integrated watering reservoir."
+    project-type: print-project
+    icon: "plant" # use bootstrap icons https://icons.getbootstrap.com/
+    status: "planned" # planned, ongoing, finished, revision
+    version: "0.0"
+    links:
+      project-page: null
+      maker-log: null
+      printables: null
+      makerworld: null
+      github: null
+    project-highlights: # use bootstrap icons https://icons.getbootstrap.com/
+      - text: "modular & expandable"
+        icon: "layers"
+      - text: "slow watering (keep the moss moist)"
+        icon: "droplet"
+      - text: "screw-together"
+        icon: "gear"
+      - text: "easy to print"
+        icon: "printer"
+    project-details:
+      components: "anchor, pole, water reservoir"
+      material: "PETG or ABS recommended"
+      supports: "Yes"
+      other-materials: "Cotton string (only if you want to use the water reservoir)"
+      assembly: "integrated screw threads - no tools required"

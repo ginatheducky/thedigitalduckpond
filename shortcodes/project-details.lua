@@ -1,31 +1,20 @@
--- Convert metadata to plain text and escape it for HTML.
-local function escape_html(value)
-  local text = value == nil and "" or pandoc.utils.stringify(value)
+-- Convert a Pandoc metadata value to plain text.
+local function text(value)
+  return value == nil and "" or pandoc.utils.stringify(value)
+end
 
-  return text
+-- Escape characters that have a special meaning in HTML.
+-- Escape & first so it doesn't affect the replacements below.
+local function escape_html(value)
+  return (value
     :gsub("&", "&amp;")
     :gsub('"', "&quot;")
     :gsub("<", "&lt;")
-    :gsub(">", "&gt;")
+    :gsub(">", "&gt;"))
 end
 
-
--- Keep icon class names restricted to a simple Bootstrap icon name.
-local function make_icon(value)
-  local name = value == nil and "" or pandoc.utils.stringify(value)
-
-  if not name:match("^[a-z0-9%-]+$") then
-    name = "star"
-  end
-
-  return string.format(
-    '<i class="bi bi-%s fs-2 lh-1" aria-hidden="true"></i>',
-    name
-  )
-end
-
-
--- These labels, icons, and their order are shared by every project.
+-- Every project uses these labels, icons, and row order.
+-- Each key matches a field inside project-details in projects.yml.
 local detail_fields = {
   { key = "components",      label = "Components",      icon = "layers" },
   { key = "material",        label = "Material",        icon = "box" },
@@ -34,40 +23,47 @@ local detail_fields = {
   { key = "assembly",        label = "Assembly",        icon = "gear" }
 }
 
-
 return {
   ["project-details"] = function(args, kwargs, meta)
-    local details = meta["project-details"] or {}
+    -- Quarto loads data/projects.yml into meta.projects.
+    -- A page with project-id: MS selects projects["MS"].
+    local project_id = text(meta["project-id"])
+    local projects = assert(meta.projects, "Missing projects metadata")
+    local project = assert(
+      projects[project_id],
+      "Unknown or missing project-id: " .. project_id
+    )
+
+    -- Use an empty table if the project has no details yet.
+    local details = project["project-details"] or {}
     local html = { '<dl class="d-flex flex-column gap-3 my-3">' }
 
+    -- Build one description-list row per field in the order above.
     for _, field in ipairs(detail_fields) do
-        local value = details[field["key"]]
-
-        if value == nil or pandoc.utils.stringify(value) == "" then
+      local value = text(details[field.key])
+      if value == "" then
         value = "Not specified"
-        end
+      end
 
-        html[#html + 1] = string.format([[
+      local label = escape_html(field.label)
+
+      -- The icon is decorative. Screen readers get the label from <dt>.
+      html[#html + 1] = string.format([[
         <div class="d-flex align-items-start gap-3">
-            <dt class="flex-shrink-0 fw-normal">
-            %s
+          <dt class="flex-shrink-0 fw-normal">
+            <i class="bi bi-%s fs-2 lh-1" aria-hidden="true"></i>
             <span class="visually-hidden">%s</span>
-            </dt>
-            <dd class="mb-0">
+          </dt>
+          <dd class="mb-0">
             <span class="fw-bold" aria-hidden="true">%s:</span>
             %s
-            </dd>
+          </dd>
         </div>
-        ]],
-        make_icon(field["icon"]),
-        escape_html(field["label"]),
-        escape_html(field["label"]),
-        escape_html(value)
-        )
+      ]], field.icon, label, label, escape_html(value))
     end
 
+    -- Insert the completed HTML where {{< project-details >}} appears.
     html[#html + 1] = "</dl>"
-
     return pandoc.RawBlock("html", table.concat(html, "\n"))
   end
 }

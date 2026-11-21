@@ -1,7 +1,7 @@
 ---
 title: "Aligning Custom Banners with Quarto's Full-Width Layout"
 subtitle: "A little CSS Grid trick for keeping custom page headers and article content perfectly aligned."
-date: 20206-11-18
+date: "20206-11-18"
 description: "How I used Quarto's built-in CSS Grid system to align custom title banners with article content when using page-layout: full."
 image: aligned-banners.webp
 categories:

@@ -1,4 +1,5 @@
 ---
+project-id: MMS
 title: "Modular Monstera System"
 subtitle: "A parametric, modular plant support with integrated watering."
 description: "A modular moss pole system for climbing plants such as Monstera. This design includes an integrated watering reservoir."
@@ -8,29 +9,6 @@ image: modular-monstera-system.webp
 categories:
   - plants
   - planned
-project-banner:
-  project-id: "modular-monster-system"
-  project-icon: "leaf"
-  version: "0.0"
-  status: "planned"
-download-links:
-  printables:
-  makerworld:
-project-highlights: # use bootstrap icons https://icons.getbootstrap.com/
-  - text: "modular & expandable"
-    icon: "layers"
-  - text: "slow watering (keep the moss moist)"
-    icon: "droplet"
-  - text: "screw-together"
-    icon: "gear"
-  - text: "easy to print"
-    icon: "printer"
-project-details:
-  components: "anchor, pole, water reservoir"
-  material: "PETG or ABS recommended"
-  supports: "Yes"
-  other-materials: "Cotton string (only if you want to use the water reservoir)"
-  assembly: "integrated screw threads - no tools required"
 draft: true
 ---
 

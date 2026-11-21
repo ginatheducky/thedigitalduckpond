@@ -3,6 +3,6 @@ toc: false
 format:
   html:
     template-partials:
-      - ../../partials/printprojects/title-block.html
+      - ../../partials/projects/title-block.html
 filters:
-  - ../../filters/include-title.lua
+  - ../../filters/include-project-banner.lua

@@ -32,7 +32,7 @@ $navbar-fg: $pond-navy;
 
 /*-- scss:rules --*/
 
-@import "styles/print-banner";
+@import "styles/project-banner";
 @import "styles/page-banner";
 @import "styles/navbar";
 @import "styles/homepage";
@@ -78,7 +78,7 @@ $navbar-fg: $pond-navy;
  * while allowing the banner background to span the entire screen.
  * The alignment automatically adapts to different screen sizes.
  */
-.print-banner-content {
+.project-banner-content {
   grid-column: page-start / page-end;
 }
 

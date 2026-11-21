@@ -1,11 +1,16 @@
-<header id="title-block-header" class="quarto-title-block default print-banner mb-0 page-columns">
+<!--
+  Custom title banner for print project pages.
+  filters/include-title.lua renders this template with the shared project title and subtitle and the page's own categories.
+-->
 
-  <div class="print-banner-content">
+<header id="title-block-header" class="quarto-title-block default project-banner mb-0 page-columns">
+
+  <div class="project-banner-content">
 
       <div class="quarto-title">
 
         $if(categories)$
-          <div class="quarto-categories printlinks">
+          <div class="quarto-categories projectlinks">
             <a href="/3Dprints.html">3Dprints > </a>
             $for(categories)$
               <div class="quarto-category">$categories$ / </div>
