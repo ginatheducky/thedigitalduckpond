@@ -1,0 +1,21 @@
+---
+pagetitle: "Maker Logs"
+title: "Maker Logs"
+description: "Experiments, iterations, discoveries and things I might want to remember next time."
+banner:
+    eyebrow: "maker_log_"
+page-layout: full
+title-block-banner: true
+format:
+    html:
+        template-partials: 
+            - partials/pages/title-block.html
+listing:
+    contents: 
+      - "content/maker-log/*.qmd"
+    sort: "date desc"
+    categories: true
+    sort-ui: false
+    filter-ui: true
+    page-size: 10
+---

@@ -14,6 +14,8 @@ website:
         text: Blog
       - href: 3Dprints.qmd
         text: 3Dprints
+      - href: maker-logs.qmd
+        text: MakerLog
       - href: about.qmd
         text: About
   page-footer:
