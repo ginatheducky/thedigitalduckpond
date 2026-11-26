@@ -17,18 +17,23 @@ end
 -- Set the label, icon, and badge color for each known status.
 local status_styles = {
   ["finished"] = {
-    label = "Finished",
-    icon = "check-circle",
+    label = "finished",
+    icon = "circle-check",
     color = "text-bg-success"
   },
-  ["in development"] = {
-    label = "In development",
-    icon = "tools",
+  ["ongoing"] = {
+    label = "ongoing",
+    icon = "gears",
     color = "text-bg-warning"
   },
   ["planned"] = {
-    label = "Planned",
-    icon = "lightbulb",
+    label = "planned",
+    icon = "clipboard-question",
+    color = "text-bg-secondary"
+  },
+  ["revision"] = {
+    label = "revision",
+    icon = "rotate",
     color = "text-bg-secondary"
   }
 }
@@ -69,14 +74,14 @@ return {
     -- A Bootstrap icon name can contain lowercase letters, digits,
     -- and hyphens. Use the leaf icon if the name is missing or invalid.
     if not project_icon:match("^[a-z0-9%-]+$") then
-      project_icon = "leaf"
+      project_icon = "circle-question"
     end
 
     -- The first item shows the slug beside the icon without a divider.
     if slug ~= "" then
       html[#html + 1] = string.format([[
         <li class="d-flex align-items-center gap-2">
-          <i class="bi bi-%s fs-4 text-warning" aria-hidden="true"></i>
+          <i class="fa-solid fa-%s fs-4 text-warning" aria-hidden="true"></i>
           <strong>%s</strong>
         </li>
       ]], project_icon, escape_html(slug))
@@ -101,12 +106,12 @@ return {
       -- a neutral badge with their original text.
       local style = status_styles[status:lower()] or {
         label = status,
-        icon = "info-circle",
+        icon = "circle-question",
         color = "text-bg-secondary"
       }
 
       add_item(string.format([[
-        <i class="bi bi-%s fs-4" aria-hidden="true"></i>
+        <i class="fa-solid fa-%s fs-4" aria-hidden="true"></i>
         <span>Status:</span>
         <span class="badge rounded-pill %s fs-6">%s</span>
       ]], style.icon, style.color, escape_html(style.label)))
@@ -114,14 +119,14 @@ return {
 
     if published ~= "" then
       add_item(string.format([[
-        <i class="bi bi-calendar3 fs-4" aria-hidden="true"></i>
+        <i class="fa-solid fa-calendar-plus fs-4" aria-hidden="true"></i>
         <span>Published: %s</span>
       ]], escape_html(published)))
     end
 
     if updated ~= "" then
       add_item(string.format([[
-        <i class="bi bi-clock-history fs-4" aria-hidden="true"></i>
+        <i class="fa-solid fa-calendar-check fs-4" aria-hidden="true"></i>
         <span>Updated: %s</span>
       ]], escape_html(updated)))
     end

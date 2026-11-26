@@ -1,0 +1,82 @@
+
+/* The Digital Duck Pond - Image Carousel */
+
+.duck-carousel {
+  width: 100%;
+  max-width: 750px;
+  margin: 2rem auto;
+
+  .carousel-item {
+    height: 420px;
+    text-align: center;
+  }
+
+  .carousel-item.active,
+  .carousel-item-next,
+  .carousel-item-prev {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-item.active {
+    display: flex;
+  }
+
+  .carousel-item img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%;
+  }
+}
+
+/* Carousel navigation arrows */
+.duck-carousel {
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: none;
+    background-image: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: solid $ink-color;
+    border-width: 0 3px 3px 0;
+  }
+
+  .carousel-control-prev-icon {
+    transform: rotate(135deg);
+  }
+
+  .carousel-control-next-icon {
+    transform: rotate(-45deg);
+  }
+
+  /* Navigation buttons */
+  .carousel-control-prev,
+  .carousel-control-next {
+    opacity: 0.7;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  /* Navigation indicators (dots) */
+  .carousel-indicators [data-bs-target] {
+    background-color: $ink-color;
+  }
+}
+
+@media (max-width: 768px) {
+  .duck-carousel .carousel-item {
+    height: 280px;
+  }
+}
+

@@ -6,7 +6,7 @@ description: "Maker Log for my Modular Monstera System"
 image: modular-monstera-system-log/monstera-system-plan.webp
 listing:
     contents: modular-monstera-system-log
-    fields: [log-type, log-id, title]
+    fields: [log-date, log-type, log-id]
     sort: "date desc"
     type: table
     categories: true

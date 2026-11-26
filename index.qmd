@@ -21,6 +21,8 @@ format:
 
 ## Hello, world! 👋
 
+<i class="fa-solid fa-house"></i> <i class="fa-solid fa-gear"></i>
+
 I have a lot of hobbies. Coding, electronics, 3D printing, robotics, running, and whatever else catches my interest.
 
 This is where I bring it all together: projects, experiments, things I've learned, and the occasional random rambling.

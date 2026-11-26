@@ -23,7 +23,7 @@ local function make_icon(value)
   end
 
   return string.format(
-    '<i class="bi bi-%s fs-2 lh-1" aria-hidden="true"></i>',
+    '<i class="fa-solid fa-%s fs-2 lh-1" aria-hidden="true"></i>',
     name
   )
 end

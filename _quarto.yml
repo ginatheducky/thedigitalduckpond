@@ -27,12 +27,19 @@ website:
         href: content\pages\privacy-policy.qmd
     right: "Made with ♥ and [Quarto](https://quarto.org)"
 
+filters:
+  - filters/image-carousel.lua
 format:
   html:
     theme:
       light: [sketchy, custom.scss, brand]
       dark: [sketchy, custom.scss, brand]
-    css: styles.css
+    css: 
+      - styles.css
+      - assets/fontawesome/css/fontawesome.min.css
+      - assets/fontawesome/css/solid.min.css
+      - assets/fontawesome/css/regular.min.css
+      - assets/fontawesome/css/brands.min.css
     toc: true
     html-math-method: mathml
     shortcodes:
